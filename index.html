@@ -21,41 +21,51 @@
     <div class="window">
       <div class="window-contant">
         <h2>Contact Us</h2>
-        <form>
+        <form id="contact-form">
           <div class="name">
-            <div class="first-name">
+            <div class="input first-name">
               <p>First Name *</p>
-              <input type="text">
+              <input type="text" name="first_name">
+              <span class="error"></span>
             </div>
-            <div class="last-name">
+            <div class="input last-name">
               <p>Last Name *</p>
-              <input type="text">
+              <input type="text" name="last_name">
+              <span class="error"></span>
             </div>
           </div>
-          <p>Emaill Address *</p>
-          <input id="email" type="email">
-          <span class="invalid">email is invalid</span>
-          <p>Query Type *</p>
-          <div class="query">
-            <div class="query-type">
-              <div class="input">
-                <input type="checkbox">
-              </div>
-              <p>General Enquiry</p>
-            </div>
-            <div class="query-type">
-              <div class="input">
-                <input type="checkbox">
-              </div>
-              <p>Support Request</p>
+          <div class="input">
+            <p>Emaill Address *</p>
+            <input id="email" type="email" name="email">
+            <span class="error"></span>
+          </div>
+          <div class="input">
+            <p>Query Type *</p>
+            <div class="query">
+              <label class="query-type">
+                <input type="radio" name="query_type" value="general">
+                <span></span>
+                <p>General Enquiry</p>
+              </label>
+              <label class="query-type">
+                <input type="radio" name="query_type" value="support">
+                <span></span>
+                <p>Support Request</p>
+              </label>
+              <span class="error"></span>
             </div>
           </div>
-          <p>Message *</p>
-          <textarea name="message" id=""></textarea>
-          <div class="approve">
-            <input id="checkbox" type="checkbox">
+          <div class="input">
+            <p>Message *</p>
+            <textarea name="message" id="" name="message"></textarea>
+            <span class="error"></span>
+          </div>
+          <div class="input approve">
+            <input id="checkbox" name="terms" type="checkbox">
             <p>I Consent To Begin Contacted By The Team *</p>
+            <span class="error"></span>
           </div>
+          
           <button type="submit">Submit</button>
         </form>
       </div>
